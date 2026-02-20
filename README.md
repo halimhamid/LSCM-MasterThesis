@@ -46,6 +46,35 @@ Primary Research Areas:
 - Simulation & Systems Engineering
 - Ethical sourcing
 - Environmental suppply chain
+
+Research Methodology and Anlysis Techniques:
+- A mixed-methods approach, combining quantitative and qualitative methods for comprehensive analysis.
+- Framework analysis aligns qualitative data with research objectives.
+- Storytelling is a central technique with advanced AI and ML algorithms are employed to analyze large datasets.
+
+Approach:
+- Data collection and cleaning: Gather data from Resrecah Qestionsaire resposnse and open-source repositories and ensure data integrity using Excel and ML tools.
+- Visualization and analytics: Create dashboards in Tableau and QGIS, supported by AI and Python for enhanced analysis and scenario management.
+- Metrics and KPI development: Develop assessment-based metrics and translate them into environmental and ethical sourcing KPIs. 
+- Application and evaluation: Apply KPIs in case studies using UNEP and CONOPS guidelines, supported by supplier scorecards and visual performance analysis.
+
+Research Result Links:
+ <p align="left">
+  <a href="https://public.tableau.com/app/profile/abdul.halim.bin.abdul.hamid/vizzes" target="_blank">
+    - Data Visualization & Dashboard in Tableau Public (available in Desktop, tablet and mobile version)
+  </a>
+  <br>
+  <a href="https://public.tableau.com/app/profile/abdul.halim.bin.abdul.hamid/vizzes" target="_blank">
+    - Data Visualization & Dashboard in Tableau Public (available in Desktop, tablet and mobile version)
+  </a>
+  <br>
+  <a href="https://public.tableau.com/app/profile/abdul.halim.bin.abdul.hamid/vizzes" target="_blank">
+    - Data Visualization & Dashboard in Tableau Public (available in Desktop, tablet and mobile version)
+  </a>
+</p>
+
+
+
   
 Documentation and Materials:
 - Report, Presentation Slides, Execution Files, and Source Code
@@ -77,7 +106,6 @@ Tableau | Advanced Excel | GIS
 
 ## 🌐 Academic Links
 
-- Research Result: https://public.tableau.com/app/profile/abdul.halim.bin.abdul.hamid/vizzes
 - LinkedIn: https://linkedin.com/in/hhamid  
 - Email: abhalim@email.com  
 
