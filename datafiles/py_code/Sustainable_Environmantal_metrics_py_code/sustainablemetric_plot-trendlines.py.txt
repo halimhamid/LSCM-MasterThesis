@@ -1,0 +1,25 @@
+# Plot trend lines for each indicator for the specified countries
+countries = ['Israel', 'Jordan', 'Lebanon', 'Syrian Arab Republic', 'West Bank and Gaza']
+
+for country in countries:
+    plt.figure(figsize=(15, 10))
+    for indicator in key_indicators:
+        plt.plot(years, tracking_df.loc[(country, indicator)], label=indicator)
+    
+    plt.title('Trend Analysis for ' + country)
+    plt.xlabel('Year')
+    plt.ylabel('Value')
+    plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.tight_layout()
+    plt.show()
+
+    print("Sample Tracking Data for " + country + ":")
+    print(tracking_df.loc[country])
+
+    # Calculate year-over-year change
+    yoy_change = tracking_df.pct_change(axis=1)
+    print("\
+Year-over-Year Change for " + country + " (2021-2022):")
+    print(yoy_change.loc[country, 2022])
+    print("\
+")

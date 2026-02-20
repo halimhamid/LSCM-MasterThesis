@@ -1,0 +1,1 @@
+{"dataframe_selector":"df[['combined_text']].head(40)","goal":"Identify themes and patterns related to ethical sourcing in the first 40 rows of the dataset."}

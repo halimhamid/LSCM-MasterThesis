@@ -1,0 +1,44 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the pivot data
+pivot_df = pd.read_excel('sustainable_metrics_pivot.xlsx', index_col=0)
+
+# Select key indicators
+key_indicators = [
+    'Access to electricity (% of population)',
+    'Renewable energy consumption (% of total final energy consumption)',
+    'CO2 emissions (metric tons per capita)',
+    'PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)',
+    'People using at least basic drinking water services (% of population)'
+]
+
+# Create a sample tracking dataframe (simulating data over 5 years)
+years = range(2018, 2023)
+tracking_data = {country: {indicator: [pivot_df.loc[country, indicator] * (1 + 0.05 * (i - 2)) for i in range(5)] 
+                           for indicator in key_indicators} 
+                 for country in pivot_df.index}
+
+tracking_df = pd.DataFrame(tracking_data).T
+tracking_df.columns = pd.MultiIndex.from_product([key_indicators, years])
+
+# Plot trend lines for each indicator
+plt.figure(figsize=(15, 10))
+for indicator in key_indicators:
+    plt.plot(years, tracking_df.loc['Cyprus', (indicator, slice(None))], label=indicator)
+
+plt.title('Trend Analysis for Cyprus')
+plt.xlabel('Year')
+plt.ylabel('Value')
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+print("Sample Tracking Data for Cyprus:")
+print(tracking_df.loc['Cyprus'])
+
+# Calculate year-over-year change
+yoy_change = tracking_df.pct_change(axis=1, level=1)
+print("\
+Year-over-Year Change for Cyprus (2021-2022):")
+print(yoy_change.loc['Cyprus', (slice(None), 2022)])
